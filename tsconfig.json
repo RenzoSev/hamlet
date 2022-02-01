@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "styles/*": ["styles/*"],
+      "shared/*": ["styles/shared/*"],
+      "store/*": ["store/*"],
+      "routes/*": ["routes/*"],
+      "hooks/*": ["hooks/*"],
+      "pages/*": ["pages/*"],
+      "components/*": ["components/*"],
+      "ophelia/*": ["ophelia/*"]
+    }
   }
 }
