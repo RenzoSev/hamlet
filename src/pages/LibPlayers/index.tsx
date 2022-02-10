@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
-
 import { useNavigation } from '@react-navigation/native';
-import { MaterialIcons } from '@expo/vector-icons';
-
 import Header from '../../components/Header';
-
 import useGame from 'hooks/useGame';
 import usePlayers from 'hooks/usePlayers';
-
 import Player from 'types/Player';
-
 import {
   Container,
   // ContainerEmptyPlayers,

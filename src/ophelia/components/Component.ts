@@ -1,7 +1,3 @@
 import React from 'react';
 
-export default interface ComponentProps {
-  title: string;
-  Icon: React.FC<any>;
-  onPressIcon?: () => void;
-}
+export default interface Component<Props> extends React.FC<Props> {}

@@ -4,9 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import { Header } from 'ophelia/components';
 import { Config as ConfigIcon } from 'ophelia/icons';
 import {
-  // Header,
-  HeaderText,
-  HeaderAction,
   Container,
   ContainerTitleAndButtons,
   ContainerTitle,
