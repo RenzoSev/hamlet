@@ -7,7 +7,7 @@ export interface WithIconStyleProps {
 }
 
 const defaultStyle = {
-  size: 24,
+  size: 22,
   color: 'white',
 };
 

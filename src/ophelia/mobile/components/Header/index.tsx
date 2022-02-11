@@ -2,7 +2,6 @@ import Component from '../Component';
 import getStyles from './styles';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { useHeaderHeight } from 'react-navigation-stack';
 import { SafeAreaView, View, Text } from 'react-native';
 
 export interface HeaderProps {
@@ -17,7 +16,7 @@ const Header: Component<HeaderProps> = ({
   Icon,
   onPressIcon,
 }) => {
-  const styles = getStyles({ height: useHeaderHeight() });
+  const styles = getStyles({});
 
   return (
     <SafeAreaView style={styles.container}>
@@ -25,7 +24,7 @@ const Header: Component<HeaderProps> = ({
 
       <View style={styles.containerInformations}>
         <View>
-          <Text>{title}</Text>
+          <Text style={styles.textPage}>{title}</Text>
         </View>
 
         <TouchableOpacity onPress={onPressIcon}>
