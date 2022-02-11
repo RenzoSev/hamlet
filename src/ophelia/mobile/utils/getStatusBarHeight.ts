@@ -1,9 +1,23 @@
 import Constants from 'expo-constants';
-import { Platform, Dimensions } from 'react-native';
-import { useHeaderHeight } from 'react-navigation-stack';
+import { Platform } from 'react-native';
 
 function getStatusBarHeight() {
-  return useHeaderHeight();
+  const heights = {
+    android: getAndroidHeight(),
+    ios: getIOSHeight(),
+  };
+
+  const deviceHeight = Platform.OS as keyof typeof heights;
+
+  return heights[deviceHeight] || 0;
+}
+
+function getAndroidHeight() {
+  return Constants.statusBarHeight + 50;
+}
+
+function getIOSHeight() {
+  return 20;
 }
 
 export default getStatusBarHeight;
