@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 import { IconProps } from 'react-native-paper/lib/typescript/components/MaterialCommunityIcon';
-import withIconStyle, { WithIconStyleProps } from 'ophelia/hocs/withIconStyle';
+import withIconStyle, { WithIconStyleProps } from 'ophelia/mobile/hocs/withIconStyle';
 
 export interface HomeProps extends WithIconStyleProps, IconProps {}
 
