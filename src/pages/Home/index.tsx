@@ -1,12 +1,9 @@
 import React from 'react';
 import { Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Header } from 'ophelia/components';
-import { Config as ConfigIcon } from 'ophelia/icons';
+import { Header } from 'ophelia/mobile/components';
+import { Config as ConfigIcon } from 'ophelia/mobile/icons';
 import {
-  // Header,
-  HeaderText,
-  HeaderAction,
   Container,
   ContainerTitleAndButtons,
   ContainerTitle,

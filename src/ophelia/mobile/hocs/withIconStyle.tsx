@@ -7,7 +7,7 @@ export interface WithIconStyleProps {
 }
 
 const defaultStyle = {
-  size: 24,
+  size: 22,
   color: 'white',
 };
 
@@ -16,9 +16,7 @@ export default function withIconStyle<T extends WithIconStyleProps>(
 ) {
   const WithIconStyleComponent: React.FC<T> = (props: T) => {
     const styleProps = { styles: { default: defaultStyle } };
-
     const extendedProps = { ...props, ...styleProps };
-
     return <Icon {...extendedProps} />;
   };
 
