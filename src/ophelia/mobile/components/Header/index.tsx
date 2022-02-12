@@ -3,6 +3,7 @@ import getStyles from './styles';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView, View, Text } from 'react-native';
+import useTheme from 'hooks/useTheme';
 
 export interface HeaderProps {
   title: string;
@@ -16,7 +17,8 @@ const Header: Component<HeaderProps> = ({
   Icon,
   onPressIcon,
 }) => {
-  const styles = getStyles({});
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
 
   return (
     <SafeAreaView style={styles.container}>
