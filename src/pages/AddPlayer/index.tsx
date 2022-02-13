@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
 import useGame from 'hooks/useGame';
-import Header from '../../components/Header';
+import { Header } from 'ophelia/mobile/components';
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   ContainerMain,
@@ -13,6 +12,7 @@ import {
   ButtonCreatePlayer,
   ContainerButtonCreatePlayer,
 } from './styles';
+import React, { useEffect, useState } from 'react';
 
 export default function AddPlayer() {
   const navigation = useNavigation();
@@ -25,7 +25,7 @@ export default function AddPlayer() {
       <ButtonIcon
         icon="camera-plus"
         size={84}
-        onPress={() => navigation.navigate('Camera', {page: 'AddPlayer'})}
+        onPress={() => navigation.navigate('Camera', { page: 'AddPlayer' })}
       />
     </ContainerCameraIcon>
   );
@@ -39,7 +39,7 @@ export default function AddPlayer() {
       id: players.length || 0,
       name,
       src: src || `${name[0]}${name[1]}`,
-      isTextPicture: !src
+      isTextPicture: !src,
     };
 
     const newPlayers = [...players, player];
