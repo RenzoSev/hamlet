@@ -1,9 +1,9 @@
 import React from 'react';
-import AddPlayer from 'pages/AddPlayer';
-import EditPlayer from 'pages/EditPlayer';
-import Home from 'pages/Home';
-import LibPlayers from 'pages/LibPlayers';
-import PlayPlayers from 'pages/PlayPlayers';
+import AddPlayer from 'pages/BeforeGame/AddPlayer';
+import EditPlayer from 'pages/BeforeGame/EditPlayer';
+import Home from 'pages/BeforeGame/Home';
+import LibPlayers from 'pages/BeforeGame/LibPlayers';
+import PlayPlayers from 'pages/BeforeGame/PlayPlayers';
 import ViewCamera from 'components/Camera';
 import { createStackNavigator } from '@react-navigation/stack';
 
