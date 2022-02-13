@@ -1,20 +1,13 @@
-import * as React from 'react';
+import OpheliaIcon from '../Icon';
 import { FontAwesome } from '@expo/vector-icons';
-import { IconProps } from 'react-native-paper/lib/typescript/components/MaterialCommunityIcon';
-import withIconStyle, { WithIconStyleProps } from 'ophelia/mobile/hocs/withIconStyle';
+import withDefaultIconStyle, {
+  WithDefaultIconStyleProps,
+} from 'ophelia/mobile/hocs/withIconStyle';
 
-export interface HomeProps extends WithIconStyleProps, IconProps {}
+export interface ConfigProps extends WithDefaultIconStyleProps {}
 
-const Home: React.FC<HomeProps> = (props) => {
-  const { styles, color, size } = props;
-
-  return (
-    <FontAwesome
-      name="gear"
-      size={size || styles.default.size}
-      color={color || styles.default.color}
-    />
-  );
+const Config: OpheliaIcon<ConfigProps> = ({ styles }) => {
+  return <FontAwesome name="gear" size={styles.size} color={styles.color} />;
 };
 
-export default withIconStyle<HomeProps>(Home);
+export default withDefaultIconStyle<ConfigProps>(Config);

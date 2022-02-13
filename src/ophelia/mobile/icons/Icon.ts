@@ -1,4 +1,10 @@
-export default interface IconProps {
-  size?: number;
-  color?: string;
+import React from 'react';
+
+export default interface OpheliaIcon<T extends IconProps> extends React.FC<T> {}
+
+export interface IconProps {
+  styles: {
+    size: number;
+    color: string;
+  };
 }

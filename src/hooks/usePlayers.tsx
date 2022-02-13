@@ -58,7 +58,9 @@ export default function usePlayers() {
   );
 
   const renderPlayers = (handleLongPress: (player: Player) => void) => {
-    if (players.length > 0) return renderWhenThereIsPlayers(handleLongPress);
+    if (players.length > 0) {
+      return renderWhenThereIsPlayers(handleLongPress);
+    }
 
     return renderWhenEmptyPlayers();
   };

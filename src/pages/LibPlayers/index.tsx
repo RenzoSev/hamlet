@@ -1,23 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import Header from '../../components/Header';
+import Header from 'ophelia/mobile/components/Header';
 import useGame from 'hooks/useGame';
 import usePlayers from 'hooks/usePlayers';
 import Player from 'types/Player';
 import {
   Container,
-  // ContainerEmptyPlayers,
-  // TextEmptyPlayers,
-  // ContainerTextEmptyPlayers,
-  // ContainerButtonAddPlayer,
-  // ButtonAddPlayer,
   ContainerMain,
-  // ContainerPlayers,
-  // ContainerPlayer,
-  // TextPlayers,
-  // ImagePlayer,
-  // ImageTextPlayer,
-  // TouchablePlayer,
   Portal,
   Dialog,
   ContainerButtonDialog,
@@ -76,7 +65,7 @@ export default function LibPlayers() {
 
   return (
     <Container>
-      <Header title="Biblioteca de Jogadores" />
+      <Header title="Biblioteca de Jogadores" hasGoBack={true} />
 
       <ContainerMain>
         {renderDialogWhenVisible()}

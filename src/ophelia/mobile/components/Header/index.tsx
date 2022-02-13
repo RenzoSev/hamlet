@@ -1,39 +1,63 @@
-import Component from '../Component';
 import getStyles from './styles';
+import OpheliaComponent from '../Component';
 import React from 'react';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { SafeAreaView, View, Text } from 'react-native';
+import TounchableIcon from '../TouchableIcon';
 import useTheme from 'hooks/useTheme';
+import { useNavigation } from '@react-navigation/core';
+import { Back, Config } from '../../icons';
+import { SafeAreaView, View, Text } from 'react-native';
 
 export interface HeaderProps {
   title: string;
-  Icon: React.ElementType;
-  onPressIcon: () => void;
+  hasGoBack?: boolean;
+  Icon?: React.ElementType;
+  onPressGenericAction?: () => void;
 }
 
-const Header: Component<HeaderProps> = ({
+const Header: OpheliaComponent<HeaderProps> = ({
   title,
-  children,
   Icon,
-  onPressIcon,
+  onPressGenericAction,
+  hasGoBack,
 }) => {
+  const navigate = useNavigation();
   const { theme } = useTheme();
+
   const styles = getStyles(theme);
+
+  function renderBackAction() {
+    if (!hasGoBack) return;
+
+    const onPressBack = () => navigate.goBack();
+    return <TounchableIcon onPressIcon={onPressBack} Icon={Back} />;
+  }
+
+  function renderText() {
+    return (
+      <View>
+        <Text style={styles.text}>{title}</Text>
+      </View>
+    );
+  }
+
+  function renderDefaultAction() {
+    if (Icon) return;
+    const onPressConfigIcon = () => alert('Configuração');
+    return <TounchableIcon onPressIcon={onPressConfigIcon} Icon={Config} />;
+  }
+
+  function renderGenericAction() {
+    if (!Icon || !onPressGenericAction) return;
+    return <TounchableIcon onPressIcon={onPressGenericAction} Icon={Icon} />;
+  }
 
   return (
     <SafeAreaView style={styles.container}>
-      {children}
-
-      <View style={styles.containerInformations}>
-        <View>
-          <Text style={styles.textPage}>{title}</Text>
-        </View>
-
-        <TouchableOpacity onPress={onPressIcon}>
-          <View>
-            <Icon />
-          </View>
-        </TouchableOpacity>
+      <View style={styles.containerActions}>
+        {renderBackAction()}
+        {renderText()}
+        {renderDefaultAction()}
+        {renderGenericAction()}
       </View>
     </SafeAreaView>
   );

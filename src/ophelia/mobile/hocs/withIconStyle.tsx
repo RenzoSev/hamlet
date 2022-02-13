@@ -1,8 +1,9 @@
 import React from 'react';
 
-export interface WithIconStyleProps {
+export interface WithDefaultIconStyleProps {
   styles: {
-    default: typeof defaultStyle;
+    size: 22;
+    color: 'white';
   };
 }
 
@@ -11,12 +12,15 @@ const defaultStyle = {
   color: 'white',
 };
 
-export default function withIconStyle<T extends WithIconStyleProps>(
-  Icon: React.FC<T>
-) {
+export default function withDefaultIconStyle<
+  T extends WithDefaultIconStyleProps
+>(Icon: React.FC<T>) {
   const WithIconStyleComponent: React.FC<T> = (props: T) => {
-    const styleProps = { styles: { default: defaultStyle } };
+    const { size, color } = defaultStyle;
+
+    const styleProps = { styles: { size, color } };
     const extendedProps = { ...props, ...styleProps };
+
     return <Icon {...extendedProps} />;
   };
 

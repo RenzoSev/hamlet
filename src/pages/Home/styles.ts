@@ -8,6 +8,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
+  background-color: #feeacc;
 `;
 
 export const Header = styled(SharedHeader)``;
@@ -44,6 +45,7 @@ export const ContainerOptions = styled.View`
 export const ButtonOptions = styled(Button)`
   width: 60%;
   margin-bottom: 12px;
+  background-color: #490912;
 `;
 
 export const ContainerContacts = styled.View`

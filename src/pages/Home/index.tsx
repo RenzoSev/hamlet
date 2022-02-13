@@ -2,7 +2,6 @@ import React from 'react';
 import { Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Header } from 'ophelia/mobile/components';
-import { Config as ConfigIcon } from 'ophelia/mobile/icons';
 import {
   Container,
   ContainerTitleAndButtons,
@@ -26,20 +25,9 @@ export default function Home() {
 
   const handleMovePage = (page: string) => navigation.navigate(page);
 
-  const onPressConfigIcon = () => alert('Configuração');
-
   return (
     <Container>
-      {/* <Header>
-        <HeaderText title="Home" />
-        <HeaderAction icon="cog" onPress={() => alert('Configuração!')} />
-      </Header> */}
-
-      <Header
-        title={'Home'}
-        Icon={ConfigIcon}
-        onPressIcon={onPressConfigIcon}
-      />
+      <Header title={'Home'} />
 
       <ContainerTitleAndButtons>
         <ContainerTitle>

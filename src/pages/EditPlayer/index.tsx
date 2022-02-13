@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { Header } from 'ophelia/mobile/components';
 import useGame from 'hooks/useGame';
-import Header from '../../components/Header';
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   ContainerMain,
@@ -13,6 +12,7 @@ import {
   ButtonCreatePlayer,
   ContainerButtonCreatePlayer,
 } from './styles';
+import React, { useEffect, useState } from 'react';
 
 export default function EditPlayer() {
   const navigation = useNavigation();
