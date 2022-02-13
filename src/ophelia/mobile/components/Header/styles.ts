@@ -13,14 +13,14 @@ const getStyles = (theme: Theme, style: HeaderStyle = {}) =>
       paddingLeft: theme.spaces.sides,
       paddingRight: theme.spaces.sides,
     },
-    containerInformations: {
+    containerActions: {
       alignItems: 'flex-end',
       flex: 1,
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginBottom: 14,
     },
-    textPage: {
+    text: {
       fontSize: theme.dimensions.font.sm,
       color: theme.colors.font.main,
     },
