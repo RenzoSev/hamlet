@@ -4,13 +4,14 @@
     "strict": true,
     "baseUrl": "src",
     "paths": {
-      "styles/*": ["styles/*"],
-      "shared/*": ["styles/shared/*"],
-      "store/*": ["store/*"],
-      "routes/*": ["routes/*"],
-      "hooks/*": ["hooks/*"],
-      "pages/*": ["pages/*"],
-      "components/*": ["components/*"],
+      "styles/*": ["app/styles/*"],
+      "shared/*": ["app/styles/shared/*"],
+      "store/*": ["app/store/*"],
+      "routes/*": ["app/routes/*"],
+      "hooks/*": ["app/hooks/*"],
+      "pages/*": ["app/pages/*"],
+      "components/*": ["app/components/*"],
+      "types/*": ["app/types/*"],
       "ophelia/*": ["ophelia/*"]
     }
   }

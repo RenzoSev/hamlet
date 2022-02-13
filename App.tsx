@@ -6,9 +6,9 @@ import {
   Poppins_400Regular,
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins';
-import ThemeProvider from './src/store/ThemeProvider';
-import GameProvider from './src/store/GameProvider';
-import Routes from './src/routes';
+import ThemeProvider from 'ophelia/theme/store/ThemeProvider';
+import GameProvider from 'store/GameProvider';
+import Routes from 'routes/index';
 
 export default function App() {
   const [fontsLoaded] = useFonts({

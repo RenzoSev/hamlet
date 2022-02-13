@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { dark, light, Theme } from 'ophelia/theme';
+import { dark, light, Theme } from '../';
 
 type ThemeProviderProps = {};
 

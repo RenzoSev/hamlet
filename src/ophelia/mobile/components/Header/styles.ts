@@ -1,4 +1,4 @@
-import getStatusBarHeight from 'ophelia/mobile/utils/getStatusBarHeight';
+import getStatusBarHeight from '../../utils/getStatusBarHeight';
 import { StyleSheet } from 'react-native';
 import { Theme } from '../../../theme';
 
