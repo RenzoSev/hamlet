@@ -1,7 +1,7 @@
 import getStyles from './styles';
 import OpheliaComponent from '../Component';
 import React from 'react';
-import TounchableIcon from '../TouchableIcon';
+import { TouchableIcon } from '../';
 import useTheme from '../../../hooks/useTheme';
 import { useNavigation } from '@react-navigation/core';
 import { Back, Config } from '../../icons';
@@ -29,7 +29,7 @@ const Header: OpheliaComponent<HeaderProps> = ({
     if (!hasGoBack) return;
 
     const onPressBack = () => navigate.goBack();
-    return <TounchableIcon onPressIcon={onPressBack} Icon={Back} />;
+    return <TouchableIcon onPressIcon={onPressBack} Icon={Back} />;
   }
 
   function renderText() {
@@ -43,12 +43,12 @@ const Header: OpheliaComponent<HeaderProps> = ({
   function renderDefaultAction() {
     if (Icon) return;
     const onPressConfigIcon = () => alert('Configuração');
-    return <TounchableIcon onPressIcon={onPressConfigIcon} Icon={Config} />;
+    return <TouchableIcon onPressIcon={onPressConfigIcon} Icon={Config} />;
   }
 
   function renderGenericAction() {
     if (!Icon || !onPressGenericAction) return;
-    return <TounchableIcon onPressIcon={onPressGenericAction} Icon={Icon} />;
+    return <TouchableIcon onPressIcon={onPressGenericAction} Icon={Icon} />;
   }
 
   return (
