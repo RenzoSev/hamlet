@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import useGame from 'hooks/useGame';
-import Player from 'types/Player';
 import {
   Container,
   FlipButton,

@@ -2,7 +2,7 @@ import OpheliaIcon from '../Icon';
 import { FontAwesome } from '@expo/vector-icons';
 import withDefaultIconStyle, {
   WithDefaultIconStyleProps,
-} from 'ophelia/mobile/hocs/withIconStyle';
+} from '../../hocs/withIconStyle';
 
 export interface ConfigProps extends WithDefaultIconStyleProps {}
 

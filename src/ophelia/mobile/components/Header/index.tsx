@@ -2,7 +2,7 @@ import getStyles from './styles';
 import OpheliaComponent from '../Component';
 import React from 'react';
 import TounchableIcon from '../TouchableIcon';
-import useTheme from 'hooks/useTheme';
+import useTheme from '../../../hooks/useTheme';
 import { useNavigation } from '@react-navigation/core';
 import { Back, Config } from '../../icons';
 import { SafeAreaView, View, Text } from 'react-native';

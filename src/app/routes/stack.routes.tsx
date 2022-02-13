@@ -1,13 +1,11 @@
 import React from 'react';
-
-import { createStackNavigator } from '@react-navigation/stack';
-
+import AddPlayer from 'pages/AddPlayer';
+import EditPlayer from 'pages/EditPlayer';
 import Home from 'pages/Home';
 import LibPlayers from 'pages/LibPlayers';
-import AddPlayer from 'pages/AddPlayer';
-import ViewCamera from 'components/Camera';
-import EditPlayer from 'pages/EditPlayer';
 import PlayPlayers from 'pages/PlayPlayers';
+import ViewCamera from 'components/Camera';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
