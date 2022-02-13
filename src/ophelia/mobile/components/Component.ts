@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default interface Component<Props> extends React.FC<Props> {}
+export default interface OpheliaComponent<T> extends React.FC<T> {}
