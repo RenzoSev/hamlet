@@ -19,7 +19,7 @@ export default function withDefaultIconStyle<
     const { size, color } = defaultStyle;
 
     const styleProps = { styles: { size, color } };
-    const extendedProps = { ...props, ...styleProps };
+    const extendedProps = { ...styleProps, ...props };
 
     return <Icon {...extendedProps} />;
   };

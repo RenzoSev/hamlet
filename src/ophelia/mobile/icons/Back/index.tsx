@@ -2,7 +2,7 @@ import OpheliaIcon from '../Icon';
 import { AntDesign } from '@expo/vector-icons';
 import withDefaultIconStyle, {
   WithDefaultIconStyleProps,
-} from '../../hocs/withIconStyle';
+} from '../../hocs/withDefaultIconStyle';
 
 export interface BackProps extends WithDefaultIconStyleProps {}
 
