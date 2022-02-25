@@ -1,3 +1,5 @@
+import { Theme } from 'ophelia/theme';
+import { StyleSheet } from 'react-native';
 import { Title, Button, IconButton } from 'react-native-paper';
 import {
   SharedHeader,
@@ -53,3 +55,18 @@ export const ContainerContacts = styled.View`
 `;
 
 export const ButtonContacts = styled(IconButton)``;
+
+export interface HomeStyle {}
+
+const getStyles = (theme?: Theme, style?: HomeStyle) =>
+  StyleSheet.create({
+    buttonPage: {
+      marginBottom: 16,
+    },
+    containerContacts: {
+      flexDirection: "row",
+      alignItems: "center"
+    },
+  });
+
+export default getStyles;

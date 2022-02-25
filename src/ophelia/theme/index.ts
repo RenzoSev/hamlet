@@ -3,16 +3,32 @@ export interface Theme {
     font: { main: string };
     background: {
       main: string;
-      secundary: string;
-      terciary: string;
+      secondary: string;
+      tertiary: string;
     };
   };
   spaces: {
     sides: number;
+    button: {
+      sm: number;
+    };
   };
   dimensions: {
     font: {
       sm: number;
+    };
+    border: {
+      main: number;
+    };
+  };
+  shadow: {
+    main: {
+      shadowOffset: {
+        width: number;
+        height: number;
+      };
+      shadowOpacity: number;
+      shadowRadius: number;
     };
   };
 }

@@ -7,7 +7,7 @@ interface HeaderStyle {}
 const getStyles = (theme: Theme, style: HeaderStyle = {}) =>
   StyleSheet.create({
     container: {
-      backgroundColor: theme.colors.background.secundary,
+      backgroundColor: theme.colors.background.secondary,
       height: getStatusBarHeight(),
       width: '100%',
       paddingLeft: theme.spaces.sides,

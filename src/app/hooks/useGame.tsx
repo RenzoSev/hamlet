@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { useContext } from 'react';
 import { GameContext } from '../store/GameProvider';
 
 export default function useGame() {

@@ -8,8 +8,8 @@ const light: Theme = {
     background: {
       ...defaultTheme.colors.background,
       main: '#feeacc',
-      secundary: '#190117',
-      terciary: '#490912',
+      secondary: '#190117',
+      tertiary: '#490912',
     },
   },
 };
